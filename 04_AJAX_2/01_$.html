@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="d1">我的div元素</div>
+    <input type="button" value="setValue" onclick="setValue()">
+    <input type="button" value="getValue" onclick="getValue()">
+
+    <script>
+        //封装
+        function $(id) {
+            return document.getElementById(id);
+        }
+        
+        function setValue() {
+            $("d1").innerHTML = "我的第一个$函数";
+        }
+
+        function getValue() {
+           console.log($("d1").innerHTML );
+        }
+
+    </script>
+
+</body>
+</html>

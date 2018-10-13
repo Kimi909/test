@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8"/>
+
+    <style >
+        table{
+            width: 600px;
+            text-align: center;
+            /*border-collapse 用于表格属性, 表示表格的两边框合并为一条。*/
+            border-collapse: collapse;
+        }
+        td,th{border:1px solid black}
+        td[colspan="3"]{
+            text-align: right;
+        }
+
+    </style>
+
+</head>
+<body>
+<table id="data">
+    <thead>
+        <tr>
+            <td>商品名称</td>
+            <td>单价</td>
+            <td>数量</td>
+            <td>小计</td>
+        </tr>
+    </thead>
+
+    <tbody>
+         <tr>
+             <td>iphone 6 </td>
+             <td>¥4488.00</td>
+             <td>
+                 <button>-</button>
+                 <span>1</span>
+                 <button>+</button>
+             </td>
+             <td>¥4488.00</td>
+         </tr>
+
+         <tr>
+             <td>iphone 4 </td>
+             <td>¥3000.00</td>
+             <td>
+                 <button>-</button>
+                 <span>1</span>
+                 <button>+</button>
+             </td>
+             <td>¥3000.00</td>
+         </tr>
+
+         <tr>
+             <td>iphone 5 </td>
+             <td>¥2000.00</td>
+             <td>
+                 <button>-</button>
+                 <span>1</span>
+                 <button>+</button>
+             </td>
+             <td>2000.00</td>
+         </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total: </td>
+            <td>¥14064.00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<script src="js/3.js"></script>
+</body>
+</html>

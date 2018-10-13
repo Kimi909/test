@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      function testToString() {
+          var arr = ["吕布","西施","东施","小乔"];
+          console.log(typeof(arr));
+
+          var str = arr.toString();
+          console.log(typeof(str));
+      }
+      //testToString();
+      function testConcat() {
+          var name1 = ["a","b","c"];
+          var name2 = ["东京","巴黎"];
+          var res = name1.concat(name2,"haha");
+          console.log(res);
+      }
+      //testConcat();
+      function testSlice() {
+          //0 1 2 3
+          var arr=["中国","美国","俄罗斯","加拿大"];
+          // -4 -3 -2 -1
+          // 要求：
+          //分别使用正数和负数两种方式
+          //取出美国和俄罗斯组成新的数组并打印出来
+          var newArr1=arr.slice(1,3);
+          var newArr2=arr.slice(-3,-1);
+          console.log(newArr1);
+          console.log(newArr2);
+
+      }
+
+     //testSlice();
+
+      /*
+          数组1：大国
+           l=["中国","美国","俄罗斯"];
+         数组s：小国
+           s=["阿富汗",
+       */
+
+
+     function testSplice() {
+         var str=["CHINA","USA","JAPAN","RUSSIA"];
+         //使用splice删除JAPAN
+         var res = str.splice(2,1);
+         console.log(res);
+
+
+         ////在CHINA后，增加CANADA
+         var res2 = str.splice(1,0,"增加CANADA");
+         console.log(res2);
+
+     }
+     // testSplice();
+
+      function testReverse() {
+         var str = ["12","23","35"];
+         var res = str.reverse();
+         console.log(res);
+
+      }
+     // testReverse();
+
+
+      function testSort() {
+          var msg = ["孙悟空","猪悟能","沙悟净"];
+          var nums=[12,34,56,112,1,23];
+          msg.sort();
+          nums.sort();
+          console.log(msg);
+          console.log(nums);
+      }
+      testSort();
+
+
+
+  </script>
+
+</body>
+</html>

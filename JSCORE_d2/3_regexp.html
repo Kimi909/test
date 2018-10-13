@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var names=["明月","白鹭","紫烟"];
+
+    var str="床前明月光，锄禾日当午，一行白鹭上青天，日照香炉生紫烟";
+
+    var reg = new RegExp(names.join("|"),"g");
+   var arr  = str.match(reg);
+   console.log(arr);
+
+</script>
+</body>
+</html>

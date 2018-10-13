@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <script>
+         /*var str="那天，我去了她家。我说: 我CAO，你家真大！";*/
+         var str="haha";
+
+         if(str.search(/[我卧]([操艹草槽]|cao)/i) != -1 ){
+                alert("包含敏感词,不能发送");
+         }else{
+               document.write(str);
+         }
+     </script>
+</body>
+</html>

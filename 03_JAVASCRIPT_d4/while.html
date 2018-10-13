@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        function f1() {
+            var i  = 1;
+            while ( i <= 10 ){
+                    console.log(i);
+                    i++;
+            }
+        }
+
+       // f1();
+
+        function printMsg() {
+            while (true){
+                var msg = prompt("请输入一段信息");
+                if(msg == 'exit'){
+                    break;
+                }else{
+                    console.log(msg);
+                }
+
+            }
+        }
+    </script>
+
+    <input type="button" value="打印消息" onclick="printMsg()">
+
+
+</body>
+</html>

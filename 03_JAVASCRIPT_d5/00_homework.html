@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*
+         *  第一行：4个空格 1*
+        **  第二行：3个空格 2*
+       ***  第三行：2个空格 3*
+      ****  第四行：1个空格 4*
+     *****  第五行：0个空格 5*
+       第几行，就是几颗*
+       空格：5-行数
+        */
+
+        function f1() {
+
+            for (var line = 1; line <= 5; line++){
+                var msg = "";
+                for( var i =1; i < 5 - line;i++){
+                    msg += " ";
+                }
+
+                for(var j = 1;j <= line; j++){
+                    msg += "*";
+                }
+                console.log(msg);
+            }
+        }
+        f1();
+    </script>
+
+</body>
+</html>

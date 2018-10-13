@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <style>
+        /*对默认样式的重写*/
+        ul{
+             list-style: none;
+             margin: 0;
+             padding: 0;
+        }
+        #banner{
+            width: 960px;
+            height: 384px;
+            overflow: hidden;
+            margin: 0 auto;
+            /*子元素要做绝对定位，一般让父元素为相对定位*/
+            position: relative;
+        }
+        #banner img{
+            width: 100%;
+        }
+        #banner ul li{
+            float: left;
+        }
+
+/*左右按鈕*/
+        #banner a.ck-aside{
+            position: absolute;
+            width: 35px;
+            height: 70px;
+            top: 160px;
+
+        }
+
+        #banner a.ck-left{
+            background: #ddd url(index/arrow-left.png) no-repeat center center;
+            left: 5px;
+        }
+
+        #banner a.ck-right{
+            background: #ddd url(index/arrow-right.png) no-repeat center center;
+            right: 5px;
+        }
+
+/*小圆点*/
+
+        #banner ul.ind{
+            position: absolute;
+            left: 450px;
+            bottom: 20px;
+        }
+        #banner ul.ind li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #000;
+            margin-right: 5px;
+
+        }
+
+        #banner ul.ind li.active{
+            background:#0aa1ed;
+        }
+
+    </style>
+
+<body>
+
+   <div id="banner">
+       <!--1.大banner图-->
+       <ul class="banner-img">
+           <li>
+               <a href="#">
+                   <img src="index/banner1.png">
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   <img src="index/banner2.png">
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   <img src="index/banner3.png">
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   <img src="index/banner4.png">
+               </a>
+           </li>
+       </ul>
+       <!--2.左右方向按钮-->
+       <a href="#" class="ck-left ck-aside"></a>
+       <a href="#" class="ck-right ck-aside"></a>
+       <!--3.导航小圆点-->
+       <ul class="ind">
+           <li class="active"></li>
+           <li></li>
+           <li></li>
+           <li></li>
+       </ul>
+
+
+   </div>
+
+</body>
+</html>

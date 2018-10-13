@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+1.隐式（自动）转换
+    不同类型的数据在计算过程中自动进行换行
+    1.数字+字符串：数字转换成字符串
+    2.数字+布尔：将布尔转换成数字,true=1,false=0
+    3.字符串+布尔：将布尔转换成字符串
+    4.布尔+布尔：将布尔转换成数字
+      true:1
+      false:0
+    问题：
+      var num1=15;
+      var num2=18;
+      var str="Hello";
+      1.str+num1+num2
+        Hello1518
+      2.num1+num2+str
+        33Hello
+
+      允许使用typeof()的函数检查变量的数据类型
+      var num=12;
+      console.log(typeof(num)); //Number
+
+      var str="Hello World";
+      console.log(typeof(str)); //string-->
+    <script>
+         var num = 15;
+         var str = "Hello World!";
+         var result = num + str;
+         console.log(result);
+
+         var num1 = 15;
+         var isFun = true;
+         var result1 = num1 + isFun;
+         console.log(result1);
+
+         var str2= "Hello";
+         var isSun = true;
+         var result3 = str2 + isSun;
+         console.log(result3);
+
+         var flag1 = true;
+         var flag2 = true;
+         var result4 = flag1 + flag2;
+         console.log(result4);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script src="common.js"></script>
+<body>
+
+    <input type="button" value="获取php中的xml" onclick="getXml()">
+
+     <script>
+         function getXml() {
+             var xhr = createXhr();
+             xhr.onreadystatechange=function(){
+                 if(xhr.readyState==4&&xhr.status==200){
+                     var res=xhr.responseXML;
+                     var name=res.getElementsByTagName("name")[0];
+                     var age=res.getElementsByTagName("age")[0];
+                     console.log("学员姓名："+name.innerHTML);
+                     console.log("学员年龄："+age.innerHTML);
+                 }
+             }
+
+             xhr.open("get","01-php-xml.php",true);
+             xhr.send(null);
+
+         }
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //hoist 声明提前
+    /*var fun = function () {
+        console.log(1);
+    }
+
+    fun();
+    var fun = function () {
+        console.log(2);
+    }
+
+    fun();*/
+
+    function  fun() {
+        console.log(1);
+    }
+   fun();
+    function  fun() {
+        console.log(2);
+    }
+    fun();
+</script>
+</body>
+</html>

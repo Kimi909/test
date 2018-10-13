@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [12,3,123,23,2,1];
+    arr.sort(function (a,b) {
+        return a - b;
+    });
+    console.log(arr);
+
+    var str = "you can you up";
+    str=str.replace(/^[a-z]/g,function(kw){
+        return kw.toUpperCase()
+    });
+    console.log(str);
+
+
+    var arr1 = [1,2,3,4,5];
+    arr1.forEach(function (elem,i,arr) {
+        arr[i]*=2;
+    });
+    console.log(arr1);
+
+    var arr2 = [1,2,3,4,5];
+    arr2 = arr2.map(function (elem) {
+        return elem *=2;
+    });
+    console.log(arr2);
+
+   /* btn.onclick = function () {
+        alert("痒");
+    };*/
+
+    (function(){
+        console.log("Hello 来自 匿名函数自调");
+    })()
+
+</script>
+
+</body>
+</html>

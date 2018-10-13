@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="common.js"></script>
+<body onload="loadUser()">
+
+  <table border="1x">
+      <thead>
+          <tr>
+              <th>登录名称</th>
+              <th>电子邮箱</th>
+              <th>联系方式</th>
+              <th>用户姓名</th>
+              <th>用户性别</th>
+              <th>操作</th>
+          </tr>
+      </thead>
+
+      <tbody id="show_body">
+      </tbody>
+  </table>
+
+  <script>
+      function loadUser() {
+          var xhr =createXhr();
+
+          xhr.onreadystatechange=function () {
+              if(xhr.readyState==4&&xhr.status==200){
+                  var res=xhr.responseText;
+
+                  var users = JSON.parse(res);
+                  var html = "";
+                  for(var i = 0;i<users.length;i++){
+                     var user = users[i];
+                     html += "<tr>";
+
+                     html += "<td>" + user.uname +"</td>";
+                     html += "<td>" + user.email +"</td>";
+                     html += "<td>" + user.phone +"</td>";
+                     html += "<td>" + user.user_name +"</td>";
+
+                     var gender = "";
+                     if(user.gender == 1 ){
+                         gender = "男";
+                     }else if (user.gender == 0){
+                         gender = "女";
+                     }else{
+                         gender = "保密";
+                      }
+                     html += "<td>" + gender +"</td>";
+                     //拼接更新、删除a标签
+                     html += "<td>";
+                     html += "<a href= 'javascript:deleteUser("+ user.uid +")'>删除</a>";
+                     html += "<a href= '05-sel-update.php?uid="+user.uid+"'>修改</a>";
+                     html +="</td>";
+                     html += "</tr>";
+                  }
+                  $("show_body").innerHTML=html;
+              }
+          }
+          xhr.open("get","03-list.php",true);
+          xhr.send(null);
+          
+      }
+
+      function deleteUser(uid) {
+          //alert(uid);
+          var xhr = createXhr();
+          xhr.onreadystatechange=function () {
+              if(xhr.readyState==4&&xhr.status==200){
+                  var res=xhr.responseText;
+                  if(res == "1"){
+                        alert("删除成功");
+                       loadUser();
+
+                  }else{
+                      alert("删除失败");
+                  }
+              }
+          }
+          xhr.open("get","04-deleteUser.php?uid="+uid ,true);
+          xhr.send(null);
+
+      }
+
+      
+  </script>
+
+
+</body>
+</html>

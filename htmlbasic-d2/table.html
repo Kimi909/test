@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <!--
+         1.width 宽度
+             2.height 高度
+             3.align 设置表格的水平对齐方式（left/center/right）
+             4.border 设置表格边框的宽度
+             5.cellpadding 设置单元格内边距（内容与td边框之间的间距）
+             6.cellspacing 设置单元格外边距（td边框外的间距）
+             7.bgcolor 背景颜色
+        -->
+     <table width="400px" height="400px" border="1px" bgcolor="pink" align="center" cellspacing="0" >
+
+         <!-- 1.align 设置当前行内容的水平对齐方式（left/center/right）
+              2.valign 设置当前行内容垂直对齐方式（top/middle/bottom）
+              3.bgcolor 设置当前一行的背景颜色-->
+         <tr align="center" valign="middle" bgcolor="#808080">
+
+             <!--td
+                 1.width 宽度
+                 2.height 高度
+                 3.align 水平对齐方式
+                 4.valign 垂直对齐方式
+                 5.bgcolor 背景颜色
+                 6.colspan 跨列
+                 7.rowspan 跨行-->
+             <td valign="bottom">1</td>
+             <td>2</td>
+             <td>3</td>
+             <td>4</td>
+         </tr>
+
+         <tr>
+             <td>21</td>
+             <td>22</td>
+             <td>23</td>
+             <td>24</td>
+         </tr>
+
+         <tr>
+             <td>31</td>
+             <td>32</td>
+             <td>33</td>
+             <td>34</td>
+         </tr>
+
+         <tr>
+             <td>41</td>
+             <td>42</td>
+             <td>43</td>
+             <td>44</td>
+         </tr>
+
+     </table>
+
+
+        <h3>创建如下图所示的表格</h3>
+     <table border="1px" width="px" align="center" cellpadding="5px">
+         <tr>
+             <td>全月应纳税所得额</td>
+             <td>税率/td>
+             <td> 速算扣除数</td>
+         </tr>
+
+         <tr>
+             <td>全月应纳税所得额&lt;1500</td>
+             <td>3%</td>
+             <td>0</td>
+         </tr>
+         <tr>
+             <td>1500=&lt;全月应纳税所得额&lt;450</td>
+             <td>10%</td>
+             <td>105</td>
+         </tr>
+         <tr>
+             <td colspan="3">...</td>
+         </tr>
+         <tr>
+             <td colspan="3">计算公式...</td>
+         </tr>
+
+
+     </table>
+
+</body>
+</html>

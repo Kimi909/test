@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //选取pid中6位置到13位置的子字符串
+    var pid = "420982198410236015";
+   // var birth = pid.slice(6,6+8);
+    var birth = pid.slice(6,-5 + 1);
+
+    //获取pid的倒数第2位，如果是奇数，就返回"男"，否则返回"女"
+    var gender = pid[pid.length-2]%2 == 1 ? "男" : "女";
+
+   console.log(birth,gender);
+
+</script>
+
+</body>
+</html>

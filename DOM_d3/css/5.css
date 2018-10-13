@@ -1,0 +1,44 @@
+table{
+    width: 700px;
+}
+td:first-child{
+    width: 60px;
+}
+td:nth-child(2){
+    width: 200px;
+}
+/*
+td:last-child{
+
+}*/
+td span{
+   color: red;
+}
+.vali_info{
+    display: none;
+}
+.vali_success,.vali_fail{
+    display: block;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.vali_success{
+    background-image: url("../images/ok.png");
+    padding-left: 20px;
+    width: 0px;
+    height: 20px;
+    overflow: hidden;
+}
+.vali_fail{
+    background-image: url("../images/err.png");
+    border: 1px solid red;
+    background-color: #ddd;
+    color: red;
+    padding-left: 30px;
+
+}
+.txt_focus{
+    border-top:2px solid black;
+    border-left:2px solid black;
+}

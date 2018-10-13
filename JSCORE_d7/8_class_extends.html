@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Flyer{
+        constructor(fname,speed){
+            this.fname = fname;
+            this.speed = speed;
+        }
+        fly(){
+            console.log(this.fname + "-----" + this.speed);
+        }
+    }
+
+    class Plane extends Flyer{
+        constructor(fname,speed,score){
+            super(fname,speed);
+            this.score = score;
+        }
+
+        getScore(){
+            console.log(this.fname + "---" + this.speed + "---"+this.score);
+        }
+    }
+    var f16=new Plane("F16",1000,5);
+    f16.fly();
+    f16.getScore();
+    console.log(f16);
+
+</script>
+</body>
+</html>

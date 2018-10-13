@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+    <ul id="scores">
+        <li>85</li>
+        <li>92</li>
+        <li>77</li>
+        <li>82</li>
+        </ul>
+
+ <script>
+        var html = scores.innerHTML;
+        console.log(html);
+        html = html.replace(/^\s*<li>|<\/li>\s*$/ig,"");
+        console.log(html);
+
+        var arr = html.split(/<\/li>\s*<li>/i);
+        console.log(arr);
+        arr.sort(function (a,b) {
+            return b>a;
+        });
+
+        console.log(arr);
+
+</script>
+
+</body>
+</html>

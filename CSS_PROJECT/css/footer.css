@@ -1,0 +1,70 @@
+div.main{
+    width: 960px;
+    margin: 0 auto;
+}
+
+div.main ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#foot-box >li{
+    float: left;
+    width: 240px;
+    text-align: center;
+}
+
+#foot-box ul li h3{
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#foot-other{
+    margin-top: 30px;
+}
+
+#foot-box{
+    display: flex;
+    margin-top: 30px;
+}
+/*买家列表*/
+div.footer-list{
+    display: flex;
+    margin-left: 45px;
+}
+
+div.footer-list ul:nth-child(2){
+    margin: 0 60px;
+}
+
+
+div.footer-list ul b{
+    color: #333;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+div.footer-list ul li{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/*二维码*/
+img{
+    vertical-align: middle;
+}
+
+div.client p+p{
+    margin-top: 7px;
+}
+
+#copy{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "microsoft yahei";
+    color: #000;
+}
+

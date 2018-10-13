@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="common.js"></script>
+<body>
+
+    <p>
+        用户名：<input type="text" id="uname">
+    </p>
+    <p>
+        密码：<input type="text" id="upwd">
+    </p>
+    <div id="show"></div>
+    <p>
+        <input type="button" value="登录" onclick="login()">
+    </p>
+
+    <script>
+       function login() {
+           var xhr = createXhr();
+           xhr.open("post","01-ajax-post.php",true);
+
+           xhr.onreadystatechange = function () {
+               if(xhr.readyState == 4 && xhr.status == 200){
+                   var res = xhr.responseText;
+                   $("show").innerHTML = "<h1>" + res + "</h1>";
+               }
+           }
+
+           xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+           var uname = $("uname").value;
+           var upwd = $("upwd").value;
+
+           var msg = "uname=" + uname + "&upwd=" + upwd;
+
+           xhr.send(msg);
+       }
+
+    </script>
+
+</body>
+</html>

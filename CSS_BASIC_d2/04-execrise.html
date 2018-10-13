@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #img-list{
+            border: 1px solid black;
+            width: 500px;
+            overflow: auto;
+        }
+
+        p{
+            width: 650px;
+        }
+
+        /*鼠标悬停在图片上时，添加右下偏移的阴影5px，颜色为#ddd*/
+        #img-list>p>img{
+            box-shadow: 5px 5px #ddd;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="img-list">
+        <p>
+            <img src="images/p_small_001.jpg" alt="">
+            <img src="images/p_small_002.jpg" alt="">
+            <img src="images/p_small_003.jpg" alt="">
+            <img src="images/p_small_004.jpg" alt="">
+            <img src="images/p_small_005.jpg" alt="">
+            <img src="images/p_small_006.jpg" alt="">
+            <img src="images/p_small_007.jpg" alt="">
+        </p>
+    </div>
+
+</body>
+</html>

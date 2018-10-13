@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        function  showURI() {
+            var key = prompt("请输入关键词");
+            var nkey = encodeURI(key);
+            var url = "http://www.baidu.com/s?wd=" + nkey;
+            console.log(url);
+        }
+        
+        function  decdeURI() {
+            var str = '%E6%89%8B%E6%9C%BA';
+            var nStr  = decodeURI(str);
+            console.log(nStr);
+        }
+    </script>
+
+    <input type="button" value="showURI" onclick="showURI()">
+    <input type="button" value="decdeURI" onclick="decdeURI()">
+
+</body>
+</html>

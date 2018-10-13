@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script src="common.js"></script>
+<body>
+
+     <input type="button" value="加载json数据" onclick="loadJson()">
+
+    <script>
+
+        function loadJson() {
+
+            var xhr = createXhr();
+
+            xhr.open("get","Person.json",true);
+
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState == 4 && xhr.status == 200){
+
+                    var res = xhr.responseText;
+                    var obj = JSON.parse(res);
+                    for (var i = 0 ;i < obj.length; i++){
+                        console.log(obj[i].name)
+                        console.log(obj[i].age)
+                        console.log(obj[i].gender)
+                    }
+
+                }
+            }
+            xhr.send(null);
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+li{
+    list-style: none;
+}
+/*
+未展开
+*/
+li span{
+     padding: 20px;
+     cursor: pointer;
+     background: url(../images/add.png) no-repeat center left ;
+}
+.tree>li>span+ul{
+    height: 0;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+
+/*展开*/
+.tree >li>span.open{
+    background: url(../images/minus.png) no-repeat center left ;
+}
+.tree>li>span.open+ul{
+    height: 106px;
+}

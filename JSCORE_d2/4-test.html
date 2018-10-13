@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var reg = /^\d{6}$/;
+    var pwd = prompt("请输入密码");
+    if(reg.test(pwd)){
+        document.write("验证通过");
+    }else{
+        document.write("密码格式不正确");
+    }
+
+</script>
+</body>
+</html>

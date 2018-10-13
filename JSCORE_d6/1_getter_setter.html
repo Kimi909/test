@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "user strict"
+    var eric = {id:1001,ename:"kimi"};
+    Object.defineProperties(eric,{
+        _age:{
+            writable:true,
+            enumerable: false,
+            configurable: false
+        },
+        age:{
+            get:function () {
+                console.log("自动调用age的get方法");
+                return this._age;
+            },
+            set:function (val) {
+                console.log("age的  set方法");
+                if(val >=18 && val <65){
+                    this._age = val;
+                }else{
+                    throw new Error("年龄必须介于18~65之间");
+                }
+            },
+            enumerable:true,
+            configurable:false
+        }
+    });
+    /*--------------*/
+    eric.age = 21;
+    console.log(eric.age);
+    console.log(eric._age);
+    eric.age = -2;
+    console.log(eric.age);
+</script>
+</body>
+</html>

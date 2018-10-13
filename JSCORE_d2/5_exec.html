@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "明明喜欢我，却不告诉我。别理我，我想静静。静静是谁？你先告诉我明明是谁？";
+    var reg = /明明|静静/g;
+
+    do{
+        var arr = reg.exec(str);
+        if(arr != null ){
+            console.log(arr.index +"a:  " + arr[0] + "c:   " + arr.lastIndex);
+        }else{
+            break;
+        }
+    }while (true)
+
+
+</script>
+</body>
+</html>

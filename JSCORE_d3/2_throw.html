@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function round(num,d) {
+        if(!isNaN(num) && !isNaN(d)){
+            num*=Math.pow(10,d);
+            num = Math.round(num);
+            num = num/Math.pow(10,d);
+            return num;
+        }else{
+            throw Error("必须输入数字");
+        }
+    }
+
+    var num = parseFloat(prompt("请输入数字"));
+    var d = parseInt(prompt("请输入数字"));
+
+    if(!isNaN(num) && !isNaN(d)){
+          var result = round(num,d);
+          document.write("结果" + result);
+    }else{
+        alert("出错了必须输入数字");
+    }
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //1.打印1-100之间所有数的和
+    function f1() {
+        var i  = 1;
+        while ( i <= 10 ){
+            console.log(i);
+            i++;
+        }
+    }
+
+    // f1();
+    //2.计算1-100之间所有偶数的和
+    function calSum1() {
+        var sum = 0;//保存所有偶数的和
+        /*方式1：从2开始，到100结束，以2递增*/
+        var i = 2;
+        while (i <= 100) {
+            sum += i;
+            i += 2;
+        }
+       return sum;
+    }
+  // console.log(calSum1());
+    /*方式3：用continue改版求偶数的和*/
+    function f3() {
+        var sum = 0;
+        var i = 1;
+        while ( i <= 100 ){
+            if(i % 2 == 1){
+                i++;
+                continue;
+            }
+            sum += i;
+            i++;
+        }
+        return sum;
+    }
+   console.log(f3());
+
+</script>
+
+</body>
+</html>

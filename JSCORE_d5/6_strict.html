@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+    		// (function(){
+    		// 	var gf;
+    		// 	qgf="今晚308,w84u";
+    		// 	console.log(gf);
+    		// })();
+    //结束后，尝试输出qgf
+    // function f(n){
+		// 	if(n<3) return 1;
+		// 	else
+		// 		return arguments.callee(n-1)+arguments.callee(n-2);
+		// }
+
+    function f(n){
+        if(n<3) return 1;
+        else{
+            //f1  f2       i
+            //1   1    2  f3
+            //1   2    3  f4
+            //2   3    5  f5
+            //3   5    8  f6
+            var f1=1, f2=1, fi;
+            for(var i=3;i<=n;i++){
+                fi=f1+f2;
+                f1=f2;
+                f2=fi;
+            }
+            return fi;
+        }
+    }
+    console.log(f(1000));
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var father={
+        bal:1000000000,
+        car:"infiniti"
+    }
+
+    function Student(sname,sage){
+        this.sname=sname;
+        this.sage=sage;
+    }
+
+    Student.prototype = father;
+    Student.prototype.intr = function () {
+        console.log("I'm "+this.sname+", I'm "+this.sage);
+    }
+    var lilei=new Student("Li Lei",18);
+    var hmm=new Student("Han Meimei",19);
+    console.log(lilei);
+    console.log(hmm);
+    console.log(hmm.bal, hmm.car);
+    console.log(lilei.bal,lilei.car);
+    lilei.intr();
+    hmm.intr();
+    console.log(lilei.__proto__==hmm.__proto__);
+
+</script>
+</body>
+</html>

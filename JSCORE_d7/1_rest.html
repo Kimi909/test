@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fun(ename,base,...args) {
+        /*var args = Array.prototype.slice.call(arguments);
+        args = args.slice(1);*/
+        var sum = args.reduce(function (prev,elem) {
+            return prev + elem;
+        },base);
+        console.log(ename + "---------的工资" +sum);
+    }
+    fun("tom",10000,1000,2000);
+    fun("tom",10000,50,500);
+
+</script>
+</body>
+</html>

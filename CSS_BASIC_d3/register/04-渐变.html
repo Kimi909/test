@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--线性渐变-->
+   <style>
+       #d1{
+           width: 300px;
+           height: 300px;
+           border: 1px solid red;
+           background-image: linear-gradient(to bottom,red,yellow,blue);
+           /*重复线性渐变*/
+           background-image: repeating-linear-gradient(to bottom ,red 0px ,yellow 80px,blue 150px);
+       }
+
+       /*径向渐变*/
+       #d2{
+           width: 300px;
+           height: 300px;
+           border: 1px solid red;
+           background-image: radial-gradient(150px at center center,red 0px,yellow 80px, blue 160px);
+       }
+
+   </style>
+
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+</html>

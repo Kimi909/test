@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="common.js"></script>
+<body>
+
+     <input type="button" value="知道getMsg()" onclick="getMsg()">
+     <div id="show"></div>
+
+
+    <script>
+        /*
+		    1.创建一个php文件，响应输出一句话“我的AJAX练习”
+			2.创建网页，在网页中增加一个按钮，一个div元素id为show,单击按钮时，异步向php文件发送一个请求，并将响应回来的数据以h1标题方式显示在div中。
+		  */
+        function getMsg() {
+
+            var xhr = createXhr();
+            xhr.open("get","00_response.php",true);
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    var res = xhr.responseText;
+                    $("show").innerHTML = "<h1>" + res + "</h1>";
+                }
+            }
+            xhr.send(null);
+
+        }
+
+    </script>
+
+</body>
+</html>

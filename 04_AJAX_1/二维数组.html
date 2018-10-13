@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*var names =  [["孙悟空","猪八戒","沙和尚"],
+            ["曹操","大乔","小乔"],
+            ["贾宝玉","林黛玉","薛宝钗"]];
+        console.log(names[1][1]);
+        console.log(names[2][1]);
+        names[2][2] = "test";
+        console.log(names[2][2]);*/
+        
+        function getCity() {
+            //1.创建一个数组，保存几个省份信息
+            var province = ['北京','上海','河南'];
+            //2.创建一个二维数组，保存省份对应的城市信息
+            var cities = [['朝阳','海淀','昌平'],['浦东','浦西'],['郑州','开封','洛阳']];
+            //3.提供弹出框，让用户输入省份名称
+            var input  = prompt("请输入地区");
+            //4.查找输入省份名称 是否在数组中存在，存在的话获取下标，并且到二维数组中获取对应的城市信息，如果不存在，给出提示
+            var index = -1;
+            for (var i = 0; i<province.length; i++){
+                if(province[i] == input){
+                    index = i;
+                    break;
+                }
+            }
+
+            //5、
+            if(index == -1){
+                alert("没有找到你的城市");
+            }else{
+                alert(cities[i]);
+            }
+        }
+        getCity();
+    </script>
+
+</body>
+</html>

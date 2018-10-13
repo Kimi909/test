@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="common.js"></script>
+
+<input type="button" value="ajax请求" onclick="setRequest()">
+
+<script>
+    function setRequest() {
+        var xhr = createXhr();
+        //2.创建请求
+        xhr.open("get","response.php",true);
+        //3.设置回调函数-onreadystatechange
+        xhr.onreadystatechange = function () {
+            //判断readyState以及status
+            if(xhr.readyState == 4 & xhr.status == 200){
+                var resText = xhr.responseText;
+                console.log(resText);
+            }
+        }
+        xhr.send(null);
+    }
+</script>
+
+</body>
+</html>

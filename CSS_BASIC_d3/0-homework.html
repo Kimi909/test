@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div.black{
+            width: 280px;
+            background: rgba(0,0,0,0.3);
+        }
+        div.black table{
+           width: 275px;
+            height: 280px;
+        }
+
+        #uname,#upwd,#btn{
+
+            width: 100%;
+            outline: 0;
+            height: 36px;
+        }
+
+        #main div.black table h4{
+            margin: 0;
+            color: red;
+        }
+
+        div.black table a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        div.black table td.myStyle{
+            color: #fff;
+            font-size: 12px;
+        }
+
+        #main{
+            background-image: url(register/bg.png);
+            width: 960px;
+            height: 560px ;
+            margin: 0 auto;
+        }
+
+        div.black{
+            margin-top: 180px;
+            margin-left: 580px;
+        }
+
+        #uname,#upwd{
+            border: 0;
+            background: #fff url(register/yhm.png) no-repeat 96% center;
+        }
+
+        #upwd{
+            background-image: url(register/mm.png);
+        }
+
+
+
+    </style>
+    <script>
+
+        function checkUname() {
+            var uname = document.getElementById("uname").value;
+            if("" == uname){
+                document.getElementById("show-uname").innerHTML="用户名不能为空";
+            }else {
+                document.getElementById("show-uname").innerHTML="通过";
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+
+    <div id="main">
+        <table></table>
+
+        <div class="black">
+            <table>
+                <tr>
+                    <td>
+                        <h4>登录学子商城</h4>
+                    </td>
+                    <td align="right">
+                       <a href="#"> 新用户注册</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <hr> </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" id="uname" placeholder="请输入用户名" onblur="checkUname()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="show-uname"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="password" id="upwd" placeholder="请输入密码" >
+                    </td>
+                </tr>
+                <tr>
+                    <td class="myStyle"> <input type="checkbox">自动登录</td>
+                    <td align="right"> <a href="#">忘记密码</a></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" id="btn" value="登录">
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+</body>
+</html>

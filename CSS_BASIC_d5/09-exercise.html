@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 1.将d1中首字符样式设置为加粗，红色，大小为20pt；
+      2.将d1中首行文本设置为橙色，斜体；
+      3.将用户选取内容设置为红色背景黄色字体*/
+        #d1::first-letter{
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #d1::first-line{
+            color: orange;
+            font-style: italic;
+        }
+
+        #d1::selection{
+            color: yellow;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        故事开始以前
+        最初的那些春天
+        阳光洒在杨树上 风吹来 闪银光
+        街道平静而温暖
+        钟走得好慢
+        那是我还不识人生之味的年代
+        我情窦还不开
+        你的衬衣如雪
+        盼着杨树叶落下
+        眼镜不眨
+        心里像有一些话
+        我们先不讲
+    </div>
+</body>
+</html>

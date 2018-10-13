@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /**
+        1、通用选择器
+         */
+       /* *{
+            color: red;
+        }*/
+
+        /**
+        2、元素选择器
+         */
+        body{
+            color: red;
+        }
+
+        div{
+            font-size: 24px;
+        }
+       /**
+       3、类选择器
+        */
+        .my_Color{
+            color: blue;
+        }
+
+        .my-fsize{
+            font-size: 50px;
+        }
+
+        div.my-fsize{
+            background: gray;
+        }
+
+        /*后代选择器*/
+        #main div p.map  span {
+            color: black;
+            font-size: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="myStyle.css">
+</head>
+<body>
+
+<h2>尚未佩妥剑，</h2>
+<span>转眼便江湖。</span>
+<div class="my_Color my-fsize">愿历尽千帆</div>
+<p>，归来仍少年。</p>
+<div class="my-fsize">，归来仍少年。</div>
+
+
+<section id="main">
+    <div>
+        <p class="map">
+            <span>这是要修饰的元素</span>
+        </p>
+        <p>pppp</p>
+    </div>
+    <span>ssss</span>
+</section>
+
+<header>
+    <div>
+        <p>
+            <a href="www.baidu.com">设置a元素的样式</a>
+        </p>
+    </div>
+</header>
+
+</body>
+</html>

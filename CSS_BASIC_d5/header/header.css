@@ -1,0 +1,74 @@
+ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+
+div.main{
+  width:960px;
+  margin:0 auto;
+  padding-top:50px;
+}
+#logo{
+  float:left;
+}
+#top-input{
+  float:left;
+  margin-left:30px;
+  width:410px;
+  height:34px;
+  border:1px solid #0aa1ed;
+}
+/*input输入框的样式*/
+#txtSearch{
+  width:280px;
+  height:34px;
+  border:none;
+  outline:0;
+  padding-left:15px;
+  box-sizing:border-box;
+  font-size:14px;
+}
+
+#top-input a.sort-search{
+   color:#c3c3c3;
+   text-decoration:none;
+   font-size:14px;
+   margin-right:5px;
+}
+#top-input i.caret{
+  border:6px solid transparent;
+  border-top-color:#bbb;
+  margin-right:10px;
+  margin-top:14px;
+  float:right;
+}
+#top-input img.search-img{
+  float:right;
+}
+
+/*右侧列表样式*/
+#list{
+  float:right;
+}
+#list li{
+  float:left;
+  line-height:20px;
+}
+#list li img{
+  vertical-align:middle;
+}
+#list li b{
+  margin:0 10px;
+  color:#bbb;
+}
+#list li a{
+  color:#bbb;
+  font-size:12px;
+}
+#list li a:hover{
+  color:#0aa1ed;
+}

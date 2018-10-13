@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   <script>
+
+       /*
+       * 2.强制转换-转换函数
+    1.toString()
+      将任意类型转换成字符串
+      语法：var res=变量.toString();
+      ex：
+        var num=15;
+	var str=num.toString();
+	console.log(typeof(str)); //string
+    2.parseInt()
+      将任意类型的数据转换为整数
+      如果转换不成功，结果为：NaN(Not a Number)
+      语法：
+        var res=parseInt(数据);
+	var num1="3a";
+	var num2="3";
+	问题：通过parseInt()转换下面两个变量值并输出
+	  var str="123acb";
+	  var str1="abc123";
+    3.parseFloat()
+      将任意类型数据转换为小数
+      如果转换不成功，结果为NaN
+      语法：
+         var res=parseFloat(数据);
+    4.Number()
+      将任意类型数据转换为number
+      注意：如果包含非法字符，则返回NaN*/
+      // 1.toString()
+     //  将任意类型转换成字符串
+       var nu=15;
+       var str = nu.toString();
+       console.log(typeof(str));
+
+       /**
+        * 2.parseInt()
+        将任意类型的数据转换为整数
+        * @type {string | null}
+        */
+       var num = parseInt("123");
+       console.log(typeof(num));
+       /**
+        * 3.parseFloat()
+        * @type {string | null}
+        */
+       var num1 = parseFloat("1.2");
+       console.log(typeof(num1));
+
+
+
+
+
+       var money = prompt("请输入金额");
+       console.log(typeof (money));
+       money = Number(money);
+       money = money + 10;
+       console.log(money);
+   </script>
+
+</body>
+</html>

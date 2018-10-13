@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <style >
+         table{
+             width: 700px ;
+             text-align: center;
+             border-collapse: collapse;
+         }
+        td,th{
+             border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="data">
+    </div>
+
+<script >
+    //作业: 动态生成表格
+    var json=[
+        {"ename":"Tom", "salary":11000, "age":25},
+        {"ename":"John", "salary":13000, "age":28},
+        {"ename":"Mary", "salary":12000, "age":25},
+        {"ename":"Rose", "salary":10000, "age":22}
+    ];
+
+    var table = document.createElement("table");
+   /* document.getElementById("data").appendChild(table);
+    var thead = document.createElement("thead");*/
+   //table创建head
+    var tHead = table.createTHead();
+    //thead创建tr
+    var tr = tHead.insertRow();
+
+    for(var key in json[0]){
+        console.log(key);
+        tr.insertCell().innerHTML = key;
+    }
+    tr.insertCell().innerHTML = "opr";
+    var tbody = table.createTBody();
+
+
+    //创建tbody追加到table
+    var tbody = table.createTBody();
+    for(var emp of json){
+        var tr = tbody.insertRow();
+        for(var key in emp){
+            tr.insertCell().innerHTML = emp[key];
+        }
+        var td = tr.insertCell();
+        var btn = document.createElement("button");
+        btn.innerHTML = "×";
+        btn.onclick = function () {
+            var tr = this.parentNode.parentNode;
+            var ename = tr.cells[0].innerHTML;
+            if( confirm("是否继续删除" + ename + "?")){
+                table.deleteRow(tr.rowIndex);
+            }
+        }
+        td.appendChild(btn);
+    }
+
+
+    //将table追加到id为data的div下
+    var div = document.getElementById("data");
+    div.appendChild(table);
+</script>
+</body>
+</html>

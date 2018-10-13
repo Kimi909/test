@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*flex-wrap
+       作用：当一个主轴排列不下所有项目时，指定如何换行
+       取值：
+          1.nowrap 默认值，即空间不够时，也不换行，项目会自动缩小。
+	  2.wrap 换行
+	  3.wrap-reverse 换行反转*/
+        div.content{
+            width: 960px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        div.content>div{
+            margin-bottom: 10px;
+            background: #ddd;
+        }
+        div.content>div:nth-child(1){
+            width: 610px;
+            height: 370px;
+        }
+        div.content>div:nth-child(2){
+            width: 340px;
+            height: 370px;
+        }
+        div.content>div:nth-child(3){
+            width: 360px;
+            height: 230px;
+        }
+
+        div.content>div.product{
+            width: 190px;
+            height: 230px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="content">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="product"></div>
+        <div class="product"></div>
+        <div class="product"></div>
+    </div>
+</body>
+</html>

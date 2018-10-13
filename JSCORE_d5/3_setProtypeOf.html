@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Student(sname,sage) {
+        this.sname = sname;
+        this.sage = sage;
+    }
+    Student.prototype.intr= function () {
+        console.log("I'm "+this.sname+", I'm "+this.sage);
+    }
+    var lilei = new Student("lilei",11);
+    var lucy = new Student("lucy",20);
+    var falther = {
+        bal : 10000000,
+        car : "bmw"
+    }
+    Object.setPrototypeOf(lucy,falther);
+    console.log(lilei);
+    console.log(lucy);
+    console.log(lilei.bal,lilei.car);
+    console.log(lucy.bal,lucy.car);
+
+</script>
+</body>
+</html>

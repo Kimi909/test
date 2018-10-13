@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <style >
+         table{
+             width: 700px ;
+             text-align: center;
+             border-collapse: collapse;
+         }
+        td,th{
+             border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="data">
+    </div>
+
+<script >
+    //作业: 动态生成表格
+    var json=[
+        {"ename":"Tom", "salary":11000, "age":25},
+        {"ename":"John", "salary":13000, "age":28},
+        {"ename":"Mary", "salary":12000, "age":25},
+        {"ename":"Rose", "salary":10000, "age":22}
+    ];
+
+    var table = document.createElement("table");
+    document.getElementById("data").appendChild(table);
+    var thead = document.createElement("thead");
+    table.appendChild(thead);
+    var tr = document.createElement("tr");
+    thead.appendChild(tr);
+
+    for(var key in json[0]){
+        var th = document.createElement("th");
+        th.innerHTML = key;
+        tr.appendChild(th);
+    }
+  /*  var table=document.createElement("table");
+    document.getElementById("data")
+        .appendChild(table);
+    var thead=document.createElement("thead");
+    table.appendChild(thead);
+    var tr=document.createElement("tr");
+    thead.appendChild(tr);
+    for(var key in json[0]){
+        var th=document.createElement("th");
+        th.innerHTML=key;
+        tr.appendChild(th);
+    }*/
+
+    //创建tbody
+    //将tbody追加到table下
+    //遍历json中每个emp对象
+    //创建tr
+    //将tr追加到tbody中
+    //遍历当前emp对象的每个属性
+    //创建td
+    //将td追加到tr中
+    //设置td的内容为emp中当前属性值
+
+
+</script>
+</body>
+</html>

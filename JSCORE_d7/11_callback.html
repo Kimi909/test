@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function conn(callback) {
+        console.log("建立连接");
+        setTimeout(function () {
+            console.log("连接成功");
+            callback(); //异步
+        },6000);
+    }
+
+    function query(callback) {
+        console.log("开始查询");
+        setTimeout(function () {
+            console.log("查询完成");
+            callback(); //异步
+        },4000);
+    }
+
+    function response() {
+        console.log("开始返回响应");
+        setTimeout(function () {
+            console.log("响应完成");
+        },2000);
+    }
+
+    conn(function () {
+        query(function(){
+            response();
+        });
+    });
+</script>
+</body>
+</html>

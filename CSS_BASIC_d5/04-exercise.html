@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 1.h3与div之间有30px的外边距。
+     2.从第二个div开始，每个div都有10px的上外边距。*/
+        h3+div{
+            margin-top: 30px;
+        }
+
+        div~div{
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+     <h3>静夜思</h3>
+      <div>此外王珞丹也是我挺欣赏的一个演</div>
+      <div>，颜值算不上最顶级，</div>
+      <div>但有种特别的文艺气质。性格比较清高</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    function ajax({type,url,data,dataType,success}) {
+         console.log(`向${url}发送${type}类型请求`);
+         if(data !== undefined){
+             console.log(`携带参数${data}`);
+         }
+         if(dataType === "json"){
+             console.log(`返回数据的类型为${dataType}`);
+         }
+    }
+    ajax({
+        type:'get',
+        url:'www.kbp.com',
+        function(){
+            console.log("处理服务器返回的数据");
+        }
+    });
+</script>
+</body>
+</html>

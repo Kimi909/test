@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script src="common.js"></script>
+<body>
+
+
+   <input type="button" value="getXml" onclick="getXml()">
+
+    <script>
+        function getXml() {
+            var xhr = createXhr();
+
+            xhr.onreadystatechange=function () {
+                if(xhr.readyState==4&&xhr.status==200){
+                    var res=xhr.responseXML;
+                    console.log(res);
+                    var names = res.getElementsByTagName("name");
+                    console.log(names[0]);
+                    var students = res.getElementsByTagName("student");
+                    console.log(students);
+                    /**
+                     *  <name>tom</name>
+                     <c>20</age>
+                     <gender>男</gender>
+                     * @type {Node | *}
+                     */
+
+                    var student = students[0];
+
+
+                    var  uname = student.getElementsByTagName("name");
+                    name = uname[0];
+                    var  age = student.getElementsByTagName("age");
+                    var  gender = student.getElementsByTagName("gender");
+                     console.log("----------------------------------------------");
+                    console.log("name->" + name.innerHTML  );
+                }
+            }
+
+
+            xhr.open("get","01-first.xml",true);
+            xhr.send(null);
+        }
+    </script>
+
+</body>
+</html>

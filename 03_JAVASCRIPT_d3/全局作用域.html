@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   <script>
+       var g_num = 10;
+       function test() {
+           uname = '孔保平'
+           console.log(uname);
+           console.log(g_num);
+       }
+       
+       function show() {
+           //不使用var关键字的全局变量，不推荐
+           console.log(uname);
+           console.log(g_num);
+       }
+       //隐式声明了变量：变量声明提前
+       function showMag() {
+           console.log(gender);
+           console.log(age);
+           var gender = '男';
+           var age = 18;
+           console.log('向别' + gender + '年龄' +age);
+
+
+       }
+   </script>
+
+   <input type="button" onclick="test()" value="test">
+   <input type="button" onclick="show()" value="show">
+   <input type="button" onclick="showMag()" value="showMag">
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="d1">这是一个div元素</div>
+    <p id = "test"> 这是一个段落元素</p>
+    用户名：<input type="text" id="uname"> <br>
+
+    <input type="button" value="获取div" onclick="button_click()">
+    <input type="button" value="获取文本" onclick="getDivContent()">
+    <input type="button" value="更改文本" onclick="setDivContent()">
+
+    <script>
+        
+        function button_click() {
+            var e1 = document.getElementById("d1");
+            var e2 = document.getElementById("test");
+            console.log(e1);
+            console.log(test);
+        }
+        
+        function getDivContent() {
+            var e1 = document.getElementById("d1");
+            console.log(e1.innerHTML);
+        }
+
+        function setDivContent() {
+            var e1 = document.getElementById("d1");
+            e1.innerHTML = "这是我的第一个DOM操作";
+        }
+
+        document.getElementById("uname").value = "哈哈";
+        console.log(document.getElementById("uname").value);
+        
+    </script>
+
+
+</body>
+</html>

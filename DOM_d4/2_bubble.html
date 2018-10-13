@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/2.css">
+</head>
+<body>
+
+     <div id="d1">
+         <div id="d2">
+             <div id="d3">
+
+             </div>
+         </div>
+     </div>
+
+
+     <script>
+         d1.onclick=function () {
+             alert(this.id);
+         }
+         d2.onclick=function (e) {
+             //var e=event?event||window.event; 解决浏览器兼容问题
+             e = e || window.event;
+             if(typeof  e.stopPropagation() === "function"){
+                 e.stopPropagation() ;
+             }else{
+                 e.cancelBubble = true;
+             }
+             alert(this.id);
+         }
+
+         d3.onclick=function (e) {
+             //var e=event?event||window.event; 解决浏览器兼容问题
+             e = e || window.event;
+             if(typeof  e.stopPropagation() === "function"){
+                 e.stopPropagation() ;
+             }else{
+                 e.cancelBubble = true;
+             }
+             alert(this.id);
+         }
+     </script>
+</body>
+</html>

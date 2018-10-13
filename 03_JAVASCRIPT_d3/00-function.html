@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function  sayHello() {
+            console.log("hello world")
+        }
+
+        function  sayH() {
+            console.log("你好 世界")
+        }
+
+        //函数中调用函数
+        function  test() {
+            sayHello();
+            sayH();
+        }
+
+    </script>
+
+    <input type="button" onclick="test()" value="测试"/>
+
+    <!--计算2个数字的和-->
+   <script>
+       function  calculate() {
+           var num1 = Number(prompt("数字1"));
+           var num2 = Number(prompt("数字2"));
+           console.log(num1 + num2);
+       }
+   </script>
+    <input type="button" onclick="calculate()" value="calculate"/>
+
+<!--传值-->
+  <script>
+      function showName(uname) {
+          alert("欢迎" + uname);
+      }
+      
+      function showInfo(brother,sister) {
+         console.log("哥哥" + brother);
+         console.log("妹妹" + sister);
+      }
+
+      function showReturnName(uname) {
+          return "欢迎" + uname;
+      }
+      function  testShowReturnName() {
+          var res = showReturnName('gg');
+          console.log(res);
+      }
+
+      function  getMax(n1,n2,n3) {
+          var max = n1;
+          max = max > n2 ? max :n2;
+          n3 > max && (max = n3);
+          console.log(max)
+      }
+
+      function  testGetMax() {
+          var res = getMax(20,50,70);
+          console.log(res)
+      }
+
+  </script>
+ <input type="button" value="名字" onclick="showName('kongbaoping')"/>
+ <input type="button" value="2个参数" onclick="showInfo('kongbaoping','haha')"/>
+ <input type="button" value="return 参数" onclick="testShowReturnName()"/>
+    <input type="button" value="获取最大值" onclick="testGetMax()"/>
+
+ 
+
+
+
+</body>
+</html>

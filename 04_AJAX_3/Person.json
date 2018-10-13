@@ -1,0 +1,17 @@
+[
+  {
+    "name":"dangdang",
+    "age":18,
+    "gender":"男"
+  },
+  {
+    "name":"dingding",
+    "age":19,
+    "gender":"女"
+  },
+  {
+    "name":"TOM",
+    "age":20,
+    "gender":"男"
+  }
+]

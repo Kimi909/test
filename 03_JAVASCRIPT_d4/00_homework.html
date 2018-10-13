@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <script>
+          /*  分三次从弹出框中输入年，月，日
+          判断该日期是该年的第？天
+      ex:
+        输入年：2017
+        输入月：3
+        输入日：5
+        2017年3月5日是2017年的第64天
+        2:平年28天 闰年29天
+        1,3,5,7,8,10,12 各31天
+        4,6,9,11 各30天*/
+          var year = Number(prompt("请输入年"));
+          var month = Number(prompt("请输入月"));
+          var day = Number(prompt("请输入日"));
+
+          var isRun = year%4==0 &&  year % 100!= 0 || year % 400 ==0;
+          var totalDays = 0;
+
+          if(month == 1 ){
+              totalDays = day;
+          }else if (month == 2){
+              totalDays=31+day;
+          }else if (month == 3){
+              totalDays=31+day + (isRun?29:28);
+          }
+
+          console.log(totalDays);
+      </script>
+
+</body>
+</html>

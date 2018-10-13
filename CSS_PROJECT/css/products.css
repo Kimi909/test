@@ -1,0 +1,227 @@
+#banner img{
+    width: 960px;
+}
+#product-list{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#pList{
+    width: 740px;
+    min-height: 200px;
+    border: 1px solid red;
+}
+#notice-board{
+    width: 210px;
+    border: 1px solid red;
+}
+
+#title{
+    height: 40px;
+    line-height: 40px;
+    background: linear-gradient(to bottom,#f0f0f0,#e0e0e0);
+    font-size: 16px;
+    padding-left: 20px;
+    color: #808080;;
+}
+
+#show-list{
+    background: #ffffff;
+    padding: 10px;
+    display: flex;
+    /*让弹性盒元素在必要的时候拆行：*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+#show-list>li{
+    width: 230px;
+    border: 1px solid red;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#show-list>li img{
+    width: 100%;
+    transition: all .5s linear;
+}
+#show-list>li img:hover{
+    transform:scale(1.1);
+}
+#show-list p.price{
+    color: #0aa1ed;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#show-list li a.intro{
+    font: 12px "microsoft yahei";
+    color: #808080;
+    line-height: 18px;
+}
+
+#show-list>li>div>span{
+     display: inline-block;
+     width: 24px;
+     height: 24px;
+     line-height: 24px;
+     font-size: 32px;
+     text-align: center;
+     color: #fff;
+     background: linear-gradient(to bottom,#efefef,#e0e0e0);;
+ }
+
+#show-list>li>div>input{
+    width: 25px;
+    height: 24px;
+    border: none;
+    outline: none;
+    text-align: center;
+    position: relative;
+    bottom: 7px;
+}
+
+#show-list>li>div a.addCart{
+    display: inline-block;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    background: linear-gradient(to bottom,#27B1F6,#0aa1ed);
+    border-radius: 3px;
+    position: relative;
+    bottom: 7px;
+
+}
+/*页码*/
+#pages{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px ;
+    text-align: right;
+    background: linear-gradient(to bottom, #f5f4f5,#e6e6e5);
+}
+#pages a{
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    color: #0aa1ed  ;
+}
+#pages a.disabled{
+    color: #bfbfbf;
+    background: #f2f2f2;;
+    border: 1px solid #bfbfbf;;
+}
+
+#pages a.current{
+    background: #0aa1ed;
+    border-color: #0aa1ed;
+    color: #fff;
+}
+
+/*----------右半部分------------*/
+#notice-board p.title img{
+    margin-left: 15px;
+}
+
+#notice-board>p.title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333;
+    background: linear-gradient(to bottom,#efefef,#e0e0e0);
+}
+
+/**/
+#notice-board div.content{
+    padding: 20px;
+    background: #fff;
+}
+
+#notice-board div.content p{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/*购物车*/
+#cart p.title{
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    background: linear-gradient(to bottom,#efefef,#e0e0e0);
+
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*购物车内容*/
+#cart div.content{
+    background: #ffffff;
+}
+
+#cart div.item{
+    border-top: 1px dashed #d0d0d0;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+}
+
+#cart div.item>span{
+    width: 65px;
+    overflow: hidden;
+    /*显示省略符号来代表被修剪的文本。*/
+    text-overflow:ellipsis;
+    /*规定段落中的文本不进行换行：*/
+    white-space: nowrap;
+}
+/*-、+号*/
+#cart div.item>div span{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background: linear-gradient(to bottom,#efefef,#e1e1e1);
+    color: #fff;
+    text-align: center;
+}
+
+#cart div.item>div input{
+    width: 14px;
+    height: 14px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+/*购物车*/
+
+#cart div.cart-result{
+    height: 45px;
+    line-height: 45px;
+    background: #808080;
+    border-top: 1px dashed #d0d0d0;
+    padding-left: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#cart div.cart-result a{
+    width: 35%;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(to bottom,#27b1f6,#0aa1ed);
+}
+
+#cart div.cart-result>span{
+    font-size: 16px;
+    color: #fff;
+}

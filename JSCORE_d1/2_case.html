@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+     <script>
+         var code = "A1a1";
+         var a = "";
+         do {
+             var input = prompt("请输入验证码" + a);
+             if(input.toLowerCase() == code.toLowerCase()){
+                 break;
+             }else {
+                 alert("重新输入");
+             }
+
+
+         }while (true){
+             document.write("<h1 style='color: red'>验证通过</h1>");
+         }
+
+     </script>
+
+
+</body>
+</html>

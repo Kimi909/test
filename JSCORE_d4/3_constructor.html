@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Student(sname,sage) {
+        this.sname = sname;
+        this.sage = sage;
+    }
+
+    Student.prototype.intr = function(){
+        console.log("I'm "+this.sname+", I'm "+this.sage);
+    }
+
+    var lilie = new Student("lilei", 11);
+    var tom = new Student("tom", 12);
+    console.log(lilie);
+    console.log(tom);
+    lilie.intr();
+    tom.intr();
+    console.log(lilie.prototype == tom.prototype);
+</script>
+</body>
+</html>

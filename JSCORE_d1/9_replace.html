@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "No zuo no die,No can no bibi";
+    var arr = str.match(/no/ig);
+    if(arr != null){
+
+        str = str.replace(/no/ig,"**");
+        console.log(str);
+        console.log("共替换了" + arr.length);
+
+    }else{
+        console.log("未找到匹配的关键词");
+    }
+</script>
+</body>
+</html>

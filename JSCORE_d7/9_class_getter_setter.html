@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    "use strict"
+    class Emp{
+        constructor(id,ename,age,salary){
+           Object.defineProperties(this,{
+               id:{
+                   value:id,
+                   writable:false,
+                   enumerable:true
+               },
+               ename:{
+                   value:ename,
+                   writable:true,
+                   enumerable:true
+               },
+               salary:{
+                   value:salary,
+                   writable:true,
+                   enumerable:true
+               },
+               _age:{
+                   writable:true,
+                   enumerable:false
+               }
+
+           })
+            this.age=age;
+            Object.seal(this);
+        }
+        //age访问器属性
+        get age(){
+            console.log("自动调用age的get方法");
+            return this._age;
+        }
+        set age(val){
+            console.log("自动调用age的set方法");
+            if(val>=18&&val<=65) this._age=val;
+            else
+                throw new Error("年龄必须介于18~65之间");
+        }
+    }
+
+
+    var eric=new Emp(1001,"埃里克",12000,/*-2*/21);
+    console.log(eric);
+</script>
+</body>
+</html>

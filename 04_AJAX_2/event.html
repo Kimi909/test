@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="common.js"></script>
+<body>
+     用户名：<input type="text" id="uname" onblur="uname_blur()" onfocus="uname_focus()">
+     <span id="uname-show"></span>
+    <script>
+        function uname_blur() {
+            $("uname-show").innerHTML = "失去焦点了";
+        }
+
+        function uname_focus() {
+            $("uname-show").innerHTML = "获得焦点";
+        }
+
+    </script>
+
+</body>
+</html>

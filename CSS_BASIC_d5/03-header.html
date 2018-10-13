@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        ul{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        #main{
+            width: 960px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        #logo{
+            float: left;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #top-input{
+            float: left;
+            margin-left: 30px;
+            width: 410px;
+            height: 34px;
+            border: 1px solid #0aa1ed;
+        }
+
+        #textSearch{
+            width: 280px;
+            height: 34px;
+            border: none;
+            outline: 0;
+            padding-left: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        #top-input img.search-img{
+            float: right;
+        }
+
+        #top-input a.sort-search{
+            color: #c3c3c3;
+            text-decoration: none;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+
+        #top-input i.caret{
+            border: 6px solid transparent;
+            border-top-color: #bbbbbb;
+             margin-right: 10px;
+             margin-top: 14px;
+             float: right;
+        }
+
+        #list li img{
+            vertical-align: middle;
+        }
+
+        #list li a{
+            color: #bbb;
+            font-size: 12px;
+        }
+
+        #list {
+            float: right;
+        }
+
+        #list li{
+            float: left;
+            line-height: 20px;
+        }
+
+        #list li b{
+            margin: 0 10px;
+            color: #bbb;
+        }
+
+        #nav{
+            margin: 73px 0 20px 0;
+        }
+
+        #nav li{
+            float:left;
+            margin-right:40px;
+        }
+        #nav li a{
+            color:#ccc;
+            font-weight:bold;
+            font-size:16px;
+        }
+        #nav li a:hover{
+            color:#b8b8b8;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <!--logo搜索框-->
+          <div id="header-top">
+              <a href="#" id="logo">
+                  <img src="img/header/logo.png">
+              </a>
+          </div>
+         <!--中搜索框-->
+         <div id="top-input">
+             <input type="text" id="textSearch" placeholder="请输入您要搜索的内容">
+             <a href="#" class="sort-search">分类搜索</a>
+             <img class="search-img" src="img/header/search.png">
+             <i class="caret"></i>
+         </div>
+
+
+          <ul id="list">
+              <li>
+                  <a href="#">
+                      <img src="img/header/care.png">
+                  </a>
+                  <b>|</b>
+              </li>
+              <li>
+                  <a href="#">
+                      <img src="img/header/order.png">
+                  </a>
+                  <b>|</b>
+              </li>
+              <li>
+                  <a href="#">
+                      <img src="img/header/shop_car.png">
+                  </a>
+                  <b>|</b>
+              </li>
+              <li>
+                  <a href="#">
+                     注册
+                  </a>
+                  <b>|</b>
+              </li>
+              <li>
+                  <a href="#">
+                      登录
+                  </a>
+              </li>
+          </ul>
+        <ul id="nav">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">学习用品</a>
+            </li>
+            <li>
+                <a href="#">私人订制</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

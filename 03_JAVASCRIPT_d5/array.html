@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+       /* var names = ["A","B","C"];
+        names[0] = "哈哈";
+        names[3] = "牛魔王";
+        names[5] = "红孩儿";
+
+        var lens = names.length;
+
+        console.log(names);*/
+
+       //1.声明一个空数组保存录入的姓名
+        function printNames() {
+            var names = [];
+            while (true){
+                var input = prompt("请输入名字");
+                if("exit" == input){
+                    break;
+                }
+                names[names.length] = input;
+            }
+            console.log(names);
+
+        }
+        
+        ////练习2：定义一个函数，声明一个整数数组，找到该数组中最大的值 
+        function getMax() {
+            var nums=[78,65,752,3,67,1];
+            var max = nums[0];
+            for(var i = 1; i < nums.length; i++){
+                if(nums[i] > max){
+                    max = nums[i];
+                }
+            }
+            console.log(max);
+            
+        }
+    </script>
+
+    <input type="button" value="打印名字" onclick="printNames()">
+    <input type="button" value="获取最大值" onclick="getMax()">
+
+
+</body>
+</html>

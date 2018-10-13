@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <script>
+
+         var path = "c:/windows/temp/3.20/logo.png";
+         var url = "http://tmooc.cn/teachers/dong.png";
+
+         var i = url.lastIndexOf("/");
+         var fileName = path.slice(i + 1);
+         console.log(fileName);
+
+         var strurl = url.slice(url.lastIndexOf("."));
+         console.log(strurl);
+     </script>
+</body>
+</html>

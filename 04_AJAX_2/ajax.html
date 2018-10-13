@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="common.js"></script>
+<body>
+
+
+<script>
+    console.log(window.XMLHttpRequest);
+    function createXhr() {
+        var xhr = null;
+        //允许通过window.XMLHttpRequest 来判断浏览器是否支持标准创建
+        if(window.XMLHttpRequest){
+             xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHttp");
+        }
+        return xhr;
+    }
+</script>
+
+<input type="button" value="测试" onclick="console.log(createXhr())">
+
+</body>
+</html>

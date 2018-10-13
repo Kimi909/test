@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+       <script>
+           function  printStr(line) {
+               for(var i = 0;i <= line; i++ ){
+                  var msg = "";
+                  for (var j = 0; j <= i ; j ++){
+                      msg += "*";
+                  }
+                  console.log(msg);
+
+               }
+           }
+          // printStr(5);
+
+           //打印乘法表
+           function  print99() {
+               for(var i = 0;i <= 9; i++ ){
+                   var msg = "";
+                   for (var j = 0; j <= i ; j ++){
+                       msg += (j+"*"+i+"="+(i*j)+"\t");
+                   }
+                   console.log(msg);
+
+               }
+           }
+           print99();
+       </script>
+</body>
+</html>

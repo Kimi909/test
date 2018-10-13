@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 1.输入一个考试成绩
+        var score = Number(prompt("请输入与成绩："));
+        //2.判断成绩如果==100输出"奖励1000元"
+        // 3.如果成绩>=90,输出"奖励100元"
+        //4.如果成绩>=70,输出"奖励10元"
+        //5.否则，输出"倒罚100元"
+        var ressult = score == 100 ?  "奖励1000元":
+                                    score >= 90 ? "奖励100元" :
+                                                               score>= 70 ?  "奖励10元" : "倒罚100元";
+        console.log(""+ ressult)
+
+
+
+    </script>
+
+</body>
+</html>

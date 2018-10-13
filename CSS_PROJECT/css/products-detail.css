@@ -1,0 +1,186 @@
+/*面包屑导航*/
+#bread-crumb,#bread-crumb a{
+    color: #333;
+    font-weight: bold;
+}
+
+/*详细信息*/
+#product-details{
+    display: flex;
+    /*让弹性盒元素在必要的时候拆行：*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#preview{
+   width: 460px;
+   border: 1px solid red;
+}
+
+#preview>ul{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#preview>ul li img{
+    width: 100%;
+}
+#preview>ul li {
+    width: 84px;
+    border: 1px solid transparent;
+}
+#preview>ul li:hover{
+    border-color:#cecfce;
+}
+
+
+#preview>p>img{
+    width: 460px;
+}
+
+#show-details{
+    width: 490px;
+    border: 1px solid red;
+    justify-content: space-between;
+}
+#recommond{
+    width: 100%;
+    border: 1px solid red;
+    height: 100px;
+}
+
+/*标题*/
+#show-details>h1{
+    font-size: 18px;
+    color: #333;
+    font-family: "Microsoft Yahei";
+}
+#show-details>h3 a{
+    color: #333;
+}
+/*学员售价*/
+#show-details>div.price{
+    padding: 20px;
+    background: linear-gradient(to bottom,#f0f0f0,#e0e0e0);
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+#show-details>p.service  {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/*客服*/
+#show-details>p.service b{
+    font-size: 15px;
+    font-family: "黑体";
+}
+#show-details>p.service b{
+    font-size: 15px;
+    font-family: "黑体";
+}
+#show-details>p.service img{
+    position: relative;
+    top: -10px;
+    left: -6px;
+}
+/*规格*/
+
+#show-details div.spec{
+    display: flex;
+}
+#show-details>div.spec b,#show-details>p.count b{
+    font-size: 15px;
+    font-family: "黑体";
+    /*flex-shrink 属性用于设置或检索弹性盒的收缩比率。。*/
+    flex-shrink: 0;
+}
+
+#show-details>div.spec>div>a{
+    padding: 8px 10px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #666;
+    display: inline-block;
+
+}
+
+/*数量*/
+#show-details>p.count{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#show-details>p.count>a{
+    display: inline-block;
+    width: 36px;
+    height: 34px;
+    line-height: 34px;
+    color: #333;
+    background: #ddd;
+    text-align: center;
+}
+#show-details>p.count>input{
+    width: 36px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box;
+}
+/*立即购买*/
+
+#show-details>p.btns>a.buy{
+    display: inline-block;
+    width: 162px;
+    height: 52px;
+    line-height: 52px ;
+    background: linear-gradient(to bottom,#f0f0f0,#e0e0e0);
+    border: 1px solid #ddd;
+    font-size: 20px;
+    color: #0aa1ed;
+    margin-right: 16px;
+}
+
+#show-details p.btns a.add img {
+    width: 162px;
+    height: 54px;
+    vertical-align: top;
+}
+
+/*为你推荐*/
+#recommend>p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#recommend>p span {
+    font-size: 14px;
+    color: #fff;
+    background: #333;
+    padding: 2px 5px;
+}
+
+#demo{
+    border: 1px solid #ddd;
+    padding: 5px 0 15px 0;
+    display: flex;
+    overflow: hidden;
+    width: 960px;
+}
+
+#demo1{
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+}
+#demo1>div, #demo2>div {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="uname">
+    <div id = "d1"></div>
+    <input type="button" value="设置div的值" onclick="getValue()">
+
+    <script>
+        function getValue() {
+            var ele = document.getElementById("uname");
+            var value = ele.value;
+            var dele = document.getElementById("d1");
+            //4.将uname元素的值赋给div元素
+            dele.innerHTML = "<h1>" + value + "</h1>";
+        }
+    </script>
+
+</body>
+</html>

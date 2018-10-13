@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="common.js"></script>
+<body>
+
+    <p>
+        用户名：<input type="text" id="uname" onfocus="uname_focus()" onblur="uname_blur()">
+        <span id="uname-show"></span>
+    </p>
+
+    <p>
+       用户密码：<input type="password" id="upwd">
+        <span id="password-show"></span>
+    </p>
+
+    <p>
+        重复密码：<input type="password" id="cpwd" onblur="cpwd_blur()">
+        <span id="cpwd-show"></span>
+    </p>
+
+
+    <script>
+        function uname_focus() {
+            $("uname-show").innerHTML = "用户名6-18位";
+        }
+        //用户名失去焦点
+        function uname_blur() {
+            var value = $("uname-show").value;
+            if(value == ""){
+                $("uname-show").innerHTML = "用户名不能为空";
+            }else{
+                $("uname-show").innerHTML = "通过";
+            }
+        }
+
+        //重复密码失去焦点时,判断两次密码是否一致
+        function cpwd_blur() {
+
+            if($("upwd").value == $("cpwd").value){
+                $("cpwd-show").innerHTML = "通过";
+            }else{
+                $("cpwd-show").innerHTML = "2次密码不一致";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

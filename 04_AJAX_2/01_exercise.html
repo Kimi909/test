@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="common.js"></script>
+<body>
+    <input type="text" id="uname">
+    <div id="test"></div>
+    <input type="button" value="设置div的值" onclick="setValue()">
+
+    <script>
+        function setValue() {
+            $("test").innerHTML =  "<br>" + $("uname").value + "</br>";
+        }
+
+    </script>
+
+</body>
+</html>

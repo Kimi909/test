@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //作业: 仿照Plane，实现Bee类型
+    function Flyer(fname,speed) {
+        this.fname = fname;
+        this.speed = speed;
+    }
+    Flyer.prototype.fly = function () {
+        console.log(this.fname+"以时速"+this.speed+"飞行");
+    }
+
+    function Phane(fname,speed,score) {
+          Flyer.call(this,fname,speed);
+          this.score = score;
+    }
+    Phane.prototype.getScore =function (){
+        console.log("击落"+this.fname+"得"+this.score+"分");
+    }
+    /*Flyer.prototype 该对象新的原型*/
+    Object.setPrototypeOf(Phane.prototype,Flyer.prototype);
+
+    var f16 = new Phane("F16",1000,5);
+    f16.fly();
+    f16.getScore();
+    console.log(f16);
+
+</script>
+</body>
+</html>

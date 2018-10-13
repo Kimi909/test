@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    /* flex-direction: row; //主轴是x轴起点在左边
+        flex-wrap: nowrap;//空间不够时也换行
+        justify-content: space-between;
+        align-items: flex-end;//底对齐*/
+    #container{
+        height: 300px;
+        border: 1px solid orangered;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    #container div{
+        width: 200px;
+        height: 200px;
+    }
+
+    .d1{
+        background: red;
+        flex-shrink: 2;   //定义项目的缩小比例，即容器空间不足时，项目将按比例缩小
+    order:2;
+    }
+    .d2{
+        background: blue;
+        flex-shrink: 4;   //定义项目的缩小比例，即容器空间不足时，项目将按比例缩小
+    order:1;
+    }
+
+    .d3{
+        background: yellow;
+        flex-shrink: 8;   //定义项目的缩小比例，即容器空间不足时，项目将按比例缩小
+    order:3;
+    }
+
+
+
+</style>
+<body>
+     <div id="container">
+         <div class="d1"></div>
+         <div class="d2"></div>
+         <div class="d3"></div>
+     </div>
+</body>
+</html>

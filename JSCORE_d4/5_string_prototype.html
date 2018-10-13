@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    if(typeof  String.prototype.startsWith != "function"){
+        String.prototype.startsWith = function (str) {
+            document.write("调用自定义的startsWith<br>");
+            return new RegExp("^"+str).test(this);
+        }
+    }
+    if(typeof  String.prototype.endsWith != "function"){
+        String.prototype.endsWith = function (str) {
+            document.write("调用自定义的startsWith<br>");
+            return new RegExp(str + "$").test(this);
+        }
+    }
+
+    var url = "https://tmooc.cn/images/logo.png";
+    if(url.startsWith("https")){
+        document.write("采用https协议<br>");
+    }else{
+        document.write("采用http协议<br>");
+    }
+
+    if(url.endsWith(".png")){
+        document.write("png格式图片")
+    }else{
+        document.write("非png格式图片")
+    }
+
+</script>
+</body>
+</html>

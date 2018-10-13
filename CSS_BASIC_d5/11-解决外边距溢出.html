@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+          #d1,#d2{
+              width: 200px;
+              height: 200px;
+          }
+
+          #d1{
+              background: red;
+          }
+
+        #d2{
+            background: blue;
+        }
+
+        #d3{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            margin-top: 50px;
+        }
+        #d2:before{
+            content: "";
+            display: table;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2">
+             <!-- <table></table>-->
+              <div id="d3"></div>
+        </div>
+    </div>
+</body>
+</html>

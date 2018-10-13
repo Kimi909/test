@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var arr = [1,2,3,4,5];
+    arr.forEach(function (elem,i,arr) {
+        arr[i]*=2;
+    });
+    var even = arr.map(function (elem) {
+        return elem *=2 ;
+    });
+    console.log(arr);
+    console.log(even);
+
+</script>
+</body>
+</html>

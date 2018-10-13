@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<ul id="searchList">
+</ul>
+
+<script>
+    var pList = [
+        {pname:"iphoneX",count:80000},
+        {pname:"iphone8",count:70000},
+        {pname:"iphone8 plus",count:60000}
+    ];
+    console.log(pList);
+    var html = "";
+    /*var html = "";
+    for(var i = 0 ; i<pList.length;i++)
+        var p = pList[i];
+        console.log(p);*/
+    /*用反引号` `包裹字符串模板*/
+    for(var p of pList){
+        html += `<li>    <strong>${p.pname}</strong>    <i>  ${p.count} </i> </li>`;
+    }
+    searchList.innerHTML = html;
+</script>
+</body>
+</html>

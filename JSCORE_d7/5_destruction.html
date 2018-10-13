@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var arr=["范冰冰",89,65,95];
+    var [sname,math,chs]=arr;
+    console.log(sname,math,chs);
+
+    var data={
+        top_sale:["商品1","商品2","商品3"],
+        new_arrival:["商品4","商品5","商品6"],
+        recommended:["商品7","商品8","商品9"]
+    };
+    var {top_sale,new_arrival,recommended}=data;
+    console.log(top_sale);
+    console.log(new_arrival);
+    console.log(recommended);
+
+    var products={
+
+        getProductById:function(id){
+            console.log("按id查询一个商品");
+        },
+        getProductsByName:function(pname){
+            console.log("按商品名称模糊检索商品");
+        },
+        getProductsByCategory:function(categoryId){
+            console.log("按商品类别检索");
+        }
+    }
+    var {getProductById,getProductsByName}=products;
+    getProductById(1);
+    getProductsByName();
+</script>
+</body>
+</html>

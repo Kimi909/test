@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>DOM Tree</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <span id="s1">Hello</span>
+    <h1>标题一</h1>
+    <script>
+        //必须等网页全部内容都加载完才执行
+        window.onload = function () {
+            var body = document.body;
+            var html = document.parentElement;
+            console.log(body);
+            console.log(html);
+            var children = body.children;
+            console.log(children);
+            var span = body.firstElementChild;
+            console.log(span);
+            var script = body.lastElementChild;
+            console.log(script);
+            console.log(span.nextElementSibling,script.previousElementSibling);
+        }
+    </script>
+</body>
+</html>
